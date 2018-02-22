@@ -1,4 +1,5 @@
-// // Esercizio N∞2 pag. 256 + vettori
+//modificato online
+// // Esercizio N¬∞2 pag. 256 + vettori
 import java.util.Scanner;
 public class Test 
 {
@@ -73,7 +74,7 @@ public class Test
 							pi=risp.charAt(0);
 						}
 						vetVil[pos].setPiscina(pi);
-						System.out.println("La villa ha la piscina: "+vetVil[pos].getPiscina()+"\t Citt‡: "+vetVil[pos].getCitt‡());
+						System.out.println("La villa ha la piscina: "+vetVil[pos].getPiscina()+"\t Citt√†: "+vetVil[pos].getCitt√†());
 					}
 					else
 						System.out.println("Villa non trovata!");
@@ -87,7 +88,7 @@ public class Test
 					pos=ricercaBinaria(vetAp, t, ind);
 					if(pos!=-1)
 					{
-						System.out.print("Ora l'appartamento Ë raggiungibile tramite ascensore? S/N: ");
+						System.out.print("Ora l'appartamento √® raggiungibile tramite ascensore? S/N: ");
 						risp=tastiera.nextLine();
 						risp=risp.toUpperCase();
 						asc=risp.charAt(0);
@@ -99,7 +100,7 @@ public class Test
 							asc=risp.charAt(0);
 						}
 						vetAp[pos].setAscensore(asc);
-						System.out.println("L'appartamento Ë raggiungibile tramite ascensore: "+vetAp[pos].getAscensore()+"\t Citt‡: "+vetAp[pos].getCitt‡());
+						System.out.println("L'appartamento √® raggiungibile tramite ascensore: "+vetAp[pos].getAscensore()+"\t Citt√†: "+vetAp[pos].getCitt√†());
 						System.out.println("\t\t\t\t Appartamenti in ordine crescente di grandezza");
 						visualizza(vetAp, t);
 					}
@@ -118,7 +119,7 @@ public class Test
 						newInd=tastiera.nextLine();
 						newInd=newInd.toUpperCase();
 						vetAb[pos].setIndirizzo(newInd);
-						System.out.println("Nuovo indirizzo: "+vetAb[pos].getIndirizzo()+"\t Citt‡: "+vetAb[pos].getSuperficie()+"\t Numero stanze: "+vetAb[pos].getNumStanze());
+						System.out.println("Nuovo indirizzo: "+vetAb[pos].getIndirizzo()+"\t Citt√†: "+vetAb[pos].getSuperficie()+"\t Numero stanze: "+vetAb[pos].getNumStanze());
 					}
 					else
 						System.out.println("Abitazione non trovata!");
@@ -147,22 +148,22 @@ public class Test
 	{
 		int num, numP, piano, numT;
 		double sup, supG;
-		String ind, citt‡, risp;
+		String ind, citt√†, risp;
 		char pisc, asc, tipo;
 		for(int i=0; i<vetAb.length; i++)
 		{
-			System.out.print("Inserisci il numero di stanze del "+(i+1)+"∞ immobile: ");
+			System.out.print("Inserisci il numero di stanze del "+(i+1)+"¬∞ immobile: ");
 			num=tastiera.nextInt();
-			System.out.print("Inserisci la superficie del "+(i+1)+"∞ immobile: ");
+			System.out.print("Inserisci la superficie del "+(i+1)+"¬∞ immobile: ");
 			sup=tastiera.nextDouble();
 			tastiera.nextLine();
-			System.out.print("Inserisci l'indirizzo del "+(i+1)+"∞ immobile: ");
+			System.out.print("Inserisci l'indirizzo del "+(i+1)+"¬∞ immobile: ");
 			ind=tastiera.nextLine();
 			ind=ind.toUpperCase();
-			System.out.print("Inserisci la citt‡ del "+(i+1)+"∞ immobile: ");
-			citt‡=tastiera.nextLine();
-			citt‡=citt‡.toUpperCase();
-			System.out.print("Il "+(i+1)+"∞ immobile Ë: V(villa), A(appartamento), S(abitazione): ");
+			System.out.print("Inserisci la citt√† del "+(i+1)+"¬∞ immobile: ");
+			citt√†=tastiera.nextLine();
+			citt√†=citt√†.toUpperCase();
+			System.out.print("Il "+(i+1)+"¬∞ immobile √®: V(villa), A(appartamento), S(abitazione): ");
 			risp=tastiera.nextLine();
 			risp=risp.toUpperCase();
 			tipo=risp.charAt(0);
@@ -176,12 +177,12 @@ public class Test
 			switch(tipo)
 			{
 				case 'V':
-					System.out.print("Inserisci il numero di piani della "+(i+1)+"∞ villa: ");
+					System.out.print("Inserisci il numero di piani della "+(i+1)+"¬∞ villa: ");
 					numP=tastiera.nextInt();
-					System.out.print("Inserisci la superficie del giardino della "+(i+1)+"∞ villa: ");
+					System.out.print("Inserisci la superficie del giardino della "+(i+1)+"¬∞ villa: ");
 					supG=tastiera.nextDouble();
 					tastiera.nextLine();
-					System.out.print("La "+(i+1)+"∞ villa ha la piscina? S/N: ");
+					System.out.print("La "+(i+1)+"¬∞ villa ha la piscina? S/N: ");
 					risp=tastiera.nextLine();
 					risp=risp.toUpperCase();
 					pisc=risp.charAt(0);
@@ -192,13 +193,13 @@ public class Test
 						risp=risp.toUpperCase();
 						pisc=risp.charAt(0);
 					}
-					vetVil[Villa.numVille]=new Villa(num, sup, ind, citt‡, numP, supG, pisc);
+					vetVil[Villa.numVille]=new Villa(num, sup, ind, citt√†, numP, supG, pisc);
 					break;
 				case 'A':
-					System.out.print("Inserisci il piano del "+(i+1)+"∞ appartamento: ");
+					System.out.print("Inserisci il piano del "+(i+1)+"¬∞ appartamento: ");
 					piano=tastiera.nextInt();
 					tastiera.nextLine();
-					System.out.print("Il "+(i+1)+"∞ appartamento Ë raggiungibile tramite ascensore? S/N: ");
+					System.out.print("Il "+(i+1)+"¬∞ appartamento √® raggiungibile tramite ascensore? S/N: ");
 					risp=tastiera.nextLine();
 					risp=risp.toUpperCase();
 					asc=risp.charAt(0);
@@ -209,12 +210,12 @@ public class Test
 						risp=risp.toUpperCase();
 						asc=risp.charAt(0);
 					}
-					System.out.print("Inserisci il numero di terrazzi del "+(i+1)+"∞ appartamento: ");
+					System.out.print("Inserisci il numero di terrazzi del "+(i+1)+"¬∞ appartamento: ");
 					numT=tastiera.nextInt();
-					vetAp[Appartamento.numAppartamenti]=new Appartamento(num, sup, ind, citt‡, piano, asc, numT);
+					vetAp[Appartamento.numAppartamenti]=new Appartamento(num, sup, ind, citt√†, piano, asc, numT);
 					break;
 				case 'S':
-					vetAb[Abitazione.numAbitazioni]=new Abitazione(num, sup, ind, citt‡);
+					vetAb[Abitazione.numAbitazioni]=new Abitazione(num, sup, ind, citt√†);
 					break;
 			}// End switch
 		}// End for
@@ -223,7 +224,7 @@ public class Test
 	{
 		for(int i=0; i<n; i++)
 		{
-			System.out.println((i+1)+"∞- "+vet[i].toString());
+			System.out.println((i+1)+"¬∞- "+vet[i].toString());
 		}
 	}
 	public static void menu()
@@ -232,10 +233,10 @@ public class Test
 		System.out.println(" 1- Visualizzare in ordine crescente di grandezza tutte le abitazioni;");
 		System.out.println(" 2- Visualizzare in ordine crescente di grandezza tutte le ville;");
 		System.out.println(" 3- Visualizzare in ordine crescente di grandezza tutti gli appartamenti;");
-		System.out.println(" 4- Modificare l'attributo piscina di una villa il cui indirizzo Ë dato in input \n    e visualizzarlo insieme alla citt‡;");
-		System.out.println(" 5- Modificare l'attributo ascensore di un appartamento il cui indirizzo Ë dato in input \n    e visualizzarlo insieme alla citt‡; dopodicchË visualizzare tutti gli \n    appartamenti in ordine crescente di grandezza;");
-		System.out.println(" 6- Modificare l'indirizzo di un'abitazione il cui indirizzo Ë dato in input \n    e visualizzare superficie e numero stanze di tale abitazione");
-		System.out.println(" 7- Visualizzare il piano e il numero di terrazzi di un appartamento il cui indirizzo \n    Ë dato in input;");
+		System.out.println(" 4- Modificare l'attributo piscina di una villa il cui indirizzo √® dato in input \n    e visualizzarlo insieme alla citt√†;");
+		System.out.println(" 5- Modificare l'attributo ascensore di un appartamento il cui indirizzo √® dato in input \n    e visualizzarlo insieme alla citt√†; dopodicch√® visualizzare tutti gli \n    appartamenti in ordine crescente di grandezza;");
+		System.out.println(" 6- Modificare l'indirizzo di un'abitazione il cui indirizzo √® dato in input \n    e visualizzare superficie e numero stanze di tale abitazione");
+		System.out.println(" 7- Visualizzare il piano e il numero di terrazzi di un appartamento il cui indirizzo \n    √® dato in input;");
 		System.out.println(" 0- Terminare l'esecuzione.");
 	}
 	public static void ordina(Immobili vet[], int n)
